@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfort Point Consult | Architecture in Lagos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #333;}
+    header {background: rgba(0,0,0,0.7); color: #fff; text-align: center; padding: 3rem 1rem; position: relative;}
+    header img {width: 90px; margin-bottom: 15px;}
+    header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+    header p {font-size: 1.2rem; color: #ddd;}
+
+    nav {background: #111; padding: 1rem; text-align: center; position: sticky; top:0; z-index: 1000;}
+    nav a {color: #fff; margin: 0 20px; text-decoration: none; font-weight: 600; transition: color 0.3s;}
+    nav a:hover {color: #f0c040;}
+
+    section {padding: 4rem 2rem; max-width: 1100px; margin: auto;}
+    h2 {text-align: center; margin-bottom: 2rem; font-size: 2rem; color:#111;}
+    p {line-height: 1.6;}
+
+    /* Slideshow */
+    .slideshow {position: relative; max-width: 100%; height: 450px; overflow: hidden;}
+    .slides {display: none; width: 100%; height: 100%; object-fit: cover;}
+
+    /* Portfolio */
+    .portfolio {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;}
+    .portfolio img {width: 100%; border-radius: 12px; transition: transform 0.3s;}
+    .portfolio img:hover {transform: scale(1.05);}
+
+    /* Services */
+    .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+    .service-box {background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s;}
+    .service-box:hover {transform: translateY(-5px);}
+
+    /* Testimonials */
+    .testimonial {background: #fff; padding: 20px; margin: 1rem 0; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    .testimonial p {font-style: italic;}
+    .testimonial span {display: block; margin-top: 10px; font-weight: bold; color: #555;}
+
+    /* Contact */
+    .contact {text-align: center;}
+    .contact form {max-width: 600px; margin: auto; display: grid; gap: 15px;}
+    .contact input, .contact textarea {padding: 12px; border: 1px solid #ccc; border-radius: 8px; width: 100%;}
+    .contact button {padding: 12px; border: none; border-radius: 8px; background: #111; color: #fff; font-weight: bold; cursor: pointer; transition: background 0.3s;}
+    .contact button:hover {background: #f0c040; color:#111;}
+
+    /* Footer */
+    footer {background: #111; color: #bbb; text-align: center; padding: 2rem; margin-top: 3rem;}
+    footer a {color: #f0c040; text-decoration: none; margin: 0 10px;}
+    footer a:hover {text-decoration: underline;}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <!-- Logo Placeholder -->
+    <img src="https://img.icons8.com/external-kmg-design-flat-kmg-design/96/ffffff/external-architecture-construction-kmg-design-flat-kmg-design.png" alt="Comfort Point Logo">
+    <h1>Comfort Point Consult</h1>
+    <p>Designing Spaces, Creating Comfort – Over 17 Years of Excellence</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <img class="slides" src="https://source.unsplash.com/1600x900/?architecture,building" alt="Architecture">
+    <img class="slides" src="https://source.unsplash.com/1600x900/?interior,design" alt="Interior Design">
+    <img class="slides" src="https://source.unsplash.com/1600x900/?house,modern" alt="Modern House">
+    <img class="slides" src="https://source.unsplash.com/1600x900/?office,architecture" alt="Office Architecture">
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Comfort Point Consult is a Lagos-based architectural and building consultancy firm led by <b>Babatunde FASAN</b>, 
+      a seasoned architect with over <b>17 years of professional experience</b>.
+    </p>
+    <p>
+      We specialize in <b>innovative designs, sustainable building solutions, and client-focused consultancy services</b>. 
+      Our philosophy is simple: we design with comfort, functionality, and timeless style in mind.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">🏠 Architectural Design</div>
+      <div class="service-box">📋 Building Consultation</div>
+      <div class="service-box">🛠 Project Management</div>
+      <div class="service-box">🎨 Interior & Exterior Design</div>
+      <div class="service-box">🔨 Renovations & Remodeling</div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio">
+      <img src="https://source.unsplash.com/600x400/?modern,house" alt="House">
+      <img src="https://source.unsplash.com/600x400/?office,architecture" alt="Office">
+      <img src="https://source.unsplash.com/600x400/?interior,architecture" alt="Interior">
+      <img src="https://source.unsplash.com/600x400/?building,design" alt="Building">
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"Comfort Point Consult delivered our dream home with style and professionalism. Highly recommended!"</p>
+      <span>– Client in Lekki, Lagos</span>
+    </div>
+    <div class="testimonial">
+      <p>"Professional, reliable, and truly understands architecture that works."</p>
+      <span>– Corporate Client, Victoria Island</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Lagos, Nigeria</p>
+    <p>📧 Email: <a href="mailto:info@comfortpoint.com">info@comfortpoint.com</a></p>
+    <p>📱 Phone: +234 XXX XXX XXXX</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Comfort Point Consult. All Rights Reserved.</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- JS for slideshow -->
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000); // Change every 4s
+    }
+    showSlides();
+  </script>
+</body>
+</html>
