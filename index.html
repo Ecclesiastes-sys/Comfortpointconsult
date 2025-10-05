@@ -6,7 +6,6 @@
   <title>Comfort Point Consult | Architecture & Design</title>
   <meta name="description" content="Comfort Point Consult — Architectural & building consultancy, Lagos. Over 17 years of experience."/>
   <style>
-    /* ----------------- Base ----------------- */
     :root{
       --bg:#f3f4f6;
       --card:#ffffff;
@@ -17,92 +16,76 @@
       --accent:#7a7f82;
     }
     *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-    a{color:inherit}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
 
-    /* ------------- Header ------------- */
     header{
-      background:linear-gradient(180deg, #efefef 0%, #e9e9e9 100%);
+      background:linear-gradient(180deg,#efefef 0%,#e9e9e9 100%);
       padding:28px 18px;
       text-align:center;
       border-bottom:4px solid var(--gold);
       box-shadow:0 2px 10px rgba(0,0,0,0.03);
     }
-    .logo-wrap{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
-    .logo-img{width:110px;height:auto;display:block}
-    .brand-title{font-family: Georgia, 'Times New Roman', serif; font-size:1.6rem; margin:0; letter-spacing:0.6px; color:#1f2933;}
-    .tagline{color:var(--gold); margin:6px 0 0; font-weight:600}
+    .logo{
+      width:180px;
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+    }
+    .brand-title{font-family:Georgia,'Times New Roman',serif;font-size:1.6rem;margin:0;letter-spacing:0.6px;color:#1f2933}
+    .tagline{color:var(--gold);margin:6px 0 0;font-weight:600}
     .subline{color:var(--muted);margin-top:6px;font-size:0.92rem}
 
-    /* ------------- Nav ------------- */
-    nav{background:#f7f7f7; display:flex;justify-content:center; gap:6px; padding:8px; border-bottom:2px solid #ececec; position:sticky; top:0; z-index:60;}
-    nav a{padding:10px 14px; text-decoration:none; color:#1f2a2b; font-weight:600; border-radius:6px;}
-    nav a:hover{color:var(--gold); background:rgba(212,175,55,0.06)}
+    nav{background:#f7f7f7;display:flex;justify-content:center;gap:6px;padding:8px;border-bottom:2px solid #ececec;position:sticky;top:0;z-index:60}
+    nav a{padding:10px 14px;font-weight:600;border-radius:6px}
+    nav a:hover{color:var(--gold);background:rgba(212,175,55,0.06)}
 
-    /* ------------- Slideshow ------------- */
-    .slideshow{max-width:1200px;margin:20px auto; border-radius:12px; overflow:hidden; box-shadow:0 6px 22px rgba(0,0,0,0.08); background:var(--card);}
-    .slide{display:none;}
+    .slideshow{max-width:1200px;margin:20px auto;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,0.08);background:var(--card)}
+    .slide{display:none}
     .slide img{width:100%;height:420px;object-fit:cover;display:block}
-    @media(max-width:600px){ .slide img{height:260px} .logo-img{width:90px} .brand-title{font-size:1.2rem} }
+    @media(max-width:600px){.slide img{height:260px}.logo{width:120px}.brand-title{font-size:1.2rem}}
 
-    /* ------------- Sections ------------- */
-    section{padding:34px 18px; max-width:1100px; margin:20px auto; background:var(--card); border-radius:10px; box-shadow:0 4px 18px rgba(0,0,0,0.04);}
-    h2{margin-top:0; text-align:center; color:#1b2b2c}
-    p{color:var(--muted); line-height:1.6}
+    section{padding:34px 18px;max-width:1100px;margin:20px auto;background:var(--card);border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.04)}
+    h2{text-align:center;color:#1b2b2c}
+    p{color:var(--muted);line-height:1.6}
 
-    /* Services + Portfolio layout */
-    .grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:18px; align-items:start}
-    .card{background:#fff;border-radius:10px; padding:14px; box-shadow:0 3px 12px rgba(0,0,0,0.04); text-align:left}
-    .card img{width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:#fff;border-radius:10px;padding:14px;box-shadow:0 3px 12px rgba(0,0,0,0.04)}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:8px;margin-bottom:10px}
 
-    /* Testimonials */
-    .testimonial{font-style:italic; color:var(--muted); padding:14px; border-left:4px solid var(--gold); border-radius:6px; background:#fff}
+    .testimonial{font-style:italic;color:var(--muted);padding:14px;border-left:4px solid var(--gold);border-radius:6px;background:#fff}
 
-    /* Contact form */
-    .contact-info{text-align:center; margin-bottom:12px}
-    form.contact-form{max-width:620px;margin:14px auto; display:block; padding:16px; border-radius:10px; background:#fafafa; box-shadow:0 2px 10px rgba(0,0,0,0.03)}
-    .contact-form input,.contact-form textarea{width:100%; padding:12px; margin:8px 0; border:1px solid #e2e8f0; border-radius:8px; font-size:1rem}
-    .contact-form button{background:var(--gold); color:#fff; border:none; padding:12px 18px; border-radius:8px; font-weight:700; cursor:pointer}
+    .contact-info{text-align:center;margin-bottom:12px}
+    form.contact-form{max-width:620px;margin:14px auto;padding:16px;border-radius:10px;background:#fafafa;box-shadow:0 2px 10px rgba(0,0,0,0.03)}
+    .contact-form input,.contact-form textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem}
+    .contact-form button{background:var(--gold);color:#fff;border:none;padding:12px 18px;border-radius:8px;font-weight:700;cursor:pointer}
     .contact-form button:hover{background:#b58f2a}
 
-    /* Footer */
-    footer{background:#f7f7f7; text-align:center; padding:18px 10px; margin-top:20px; border-top:3px solid var(--gold)}
-    .socials{display:flex; gap:12px; justify-content:center; margin-top:8px}
-    .socials a{color:var(--accent); font-weight:600; text-decoration:none}
-    .small{font-size:0.92rem; color:var(--muted)}
+    footer{background:#f7f7f7;text-align:center;padding:18px 10px;margin-top:20px;border-top:3px solid var(--gold)}
+    .socials{display:flex;gap:12px;justify-content:center;margin-top:8px}
+    .socials a{color:var(--accent);font-weight:600}
+    .small{font-size:0.92rem;color:var(--muted)}
 
-    /* Fade-in */
-    section{opacity:0; transform:translateY(30px); transition:all 0.9s ease-out}
-    section.fade-in{opacity:1; transform:translateY(0)}
+    section{opacity:0;transform:translateY(30px);transition:all 0.9s ease-out}
+    section.fade-in{opacity:1;transform:translateY(0)}
 
-    /* WhatsApp */
-    .whatsapp-float{position:fixed; bottom:22px; right:22px; width:66px; height:66px; z-index:120; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#25D366; border:3px solid var(--gold); box-shadow:0 8px 22px rgba(0,0,0,0.12)}
-    .whatsapp-float img{width:34px; height:34px}
+    .whatsapp-float{position:fixed;bottom:22px;right:22px;width:66px;height:66px;z-index:120;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25D366;border:3px solid var(--gold);box-shadow:0 8px 22px rgba(0,0,0,0.12)}
+    .whatsapp-float img{width:34px;height:34px}
 
-    /* Back to top */
-    #backToTop{display:none; position:fixed; bottom:100px; right:26px; z-index:110; background:var(--gold); color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer; font-weight:700; box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    #backToTop{display:none;position:fixed;bottom:100px;right:26px;z-index:110;background:var(--gold);color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
     #backToTop:hover{transform:scale(1.05)}
-
-    /* small screen spacing */
-    @media(max-width:480px){ section{padding:22px 14px} .grid{gap:12px} .slideshow{margin:12px} }
   </style>
 </head>
 <body>
 
-  <!-- Header with transparent logo above name -->
+  <!-- Header -->
   <header>
-    <div class="logo-wrap">
-      <!-- Make sure logo.png is uploaded to repo root and is transparent PNG -->
-      <img src="logo.png" alt="Comfort Point Consult logo" class="logo-img" />
-      <div>
-        <div class="brand-title">Comfort Point Consult</div>
-        <div class="tagline">Designing Spaces, Creating Comfort</div>
-        <div class="subline">Over 17 years of Architectural Excellence — Lagos, Nigeria</div>
-      </div>
-    </div>
+    <img src="file_000000009b2062438270f5ace15c82b7 (1).png" alt="Comfort Point Consult Logo" class="logo" />
+    <div class="brand-title">Comfort Point Consult</div>
+    <div class="tagline">Designing Spaces, Creating Comfort</div>
+    <div class="subline">Over 17 years of Architectural Excellence — Lagos, Nigeria</div>
   </header>
 
-  <!-- Nav -->
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -111,20 +94,12 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Slideshow (Home) -->
   <div class="slideshow" id="home">
-    <div class="slide">
-      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=70" alt="Architecture 1">
-    </div>
-    <div class="slide">
-      <img src="https://images.unsplash.com/photo-1529421308260-2fda9f7d9a73?auto=format&fit=crop&w=1600&q=70" alt="Architecture 2">
-    </div>
-    <div class="slide">
-      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1600&q=70" alt="Architecture 3">
-    </div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=70"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1529421308260-2fda9f7d9a73?auto=format&fit=crop&w=1600&q=70"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1600&q=70"></div>
   </div>
 
-  <!-- About -->
   <section id="about">
     <h2>About Comfort Point Consult</h2>
     <p>
@@ -134,60 +109,31 @@
     </p>
   </section>
 
-  <!-- Services -->
   <section id="services">
     <h2>Our Services</h2>
     <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Architectural Design</h3>
-        <p>Concept design, detailed drawings, 3D visualization and planning for homes, offices and public buildings.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Construction Supervision</h3>
-        <p>On-site management, quality control and coordination with contractors to deliver projects on time and on budget.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Consultation & Project Management</h3>
-        <p>Comprehensive consultancy from feasibility to handover — cost estimates, compliance checks and project oversight.</p>
-      </div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=60"><h3>Architectural Design</h3><p>Concept design, detailed drawings, 3D visualization and planning for homes, offices and public buildings.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=60"><h3>Construction Supervision</h3><p>On-site management, quality control and coordination with contractors to deliver projects on time and on budget.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60"><h3>Consultation & Project Management</h3><p>Comprehensive consultancy from feasibility to handover — cost estimates, compliance checks and project oversight.</p></div>
     </div>
   </section>
 
-  <!-- Portfolio -->
   <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Luxury Villa</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Corporate Office</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60" alt="">
-        <h3>Modern Apartment</h3>
-      </div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"><h3>Luxury Villa</h3></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60"><h3>Corporate Office</h3></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60"><h3>Modern Apartment</h3></div>
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section id="testimonials">
     <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      "Comfort Point Consult delivered our dream home with style and professionalism. Highly recommended!" — Client, Lekki
-    </div>
+    <div class="testimonial">"Comfort Point Consult delivered our dream home with style and professionalism. Highly recommended!" — Client, Lekki</div>
     <div style="height:12px"></div>
-    <div class="testimonial">
-      "Professional, reliable, and truly understands architecture that works." — Corporate Client, Victoria Island
-    </div>
+    <div class="testimonial">"Professional, reliable, and truly understands architecture that works." — Corporate Client, Victoria Island</div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
@@ -195,26 +141,20 @@
       <div class="small">📱 WhatsApp: <a href="https://wa.me/2348083801047" target="_blank">080 8380 1047</a></div>
       <div class="small">✉️ Email: <a href="mailto:comfortpointconsult@gmail.com">comfortpointconsult@gmail.com</a></div>
     </div>
-
     <h3 style="text-align:center">Message Us</h3>
-
-    <!-- FormSubmit form -->
     <form class="contact-form" action="https://formsubmit.co/comfortpointconsult@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://ecclesiastes-sys.github.io/comfortpoint/thankyou.html">
       <label>Full name</label>
-      <input type="text" name="name" placeholder="Your full name" required>
+      <input type="text" name="name" required>
       <label>Email</label>
-      <input type="email" name="email" placeholder="you@example.com" required>
+      <input type="email" name="email" required>
       <label>Message</label>
-      <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-      <div style="text-align:center; margin-top:6px;">
-        <button type="submit">Send Message</button>
-      </div>
+      <textarea name="message" rows="5" required></textarea>
+      <div style="text-align:center;margin-top:6px"><button type="submit">Send Message</button></div>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="small">&copy; 2025 Comfort Point Consult — Designed & managed by Babatunde Fasan</div>
     <div class="socials">
@@ -224,54 +164,22 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a class="whatsapp-float" href="https://wa.me/2348083801047" target="_blank" title="Chat with Comfort Point Consult">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/2348083801047" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
+  <button id="backToTop">⬆</button>
 
-  <!-- Back to top -->
-  <button id="backToTop" title="Back to top">⬆</button>
-
-  <!-- ------------- Scripts ------------- -->
   <script>
-    /* Slide show */
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slide");
-    function showSlides(){
-      for(let i=0;i<slides.length;i++){ slides[i].style.display = "none"; }
-      slideIndex++;
-      if(slideIndex > slides.length) slideIndex = 1;
-      if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides,3500);
-    }
-    showSlides();
+    let slideIndex=0;const slides=document.getElementsByClassName("slide");
+    function showSlides(){for(let i=0;i<slides.length;i++){slides[i].style.display="none"}slideIndex++;if(slideIndex>slides.length)slideIndex=1;if(slides[slideIndex-1])slides[slideIndex-1].style.display="block";setTimeout(showSlides,3500)}showSlides();
 
-    /* Smooth navigation scroll */
-    document.querySelectorAll('nav a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href').substring(1);
-        const el = document.getElementById(id);
-        if(el) window.scrollTo({ top: el.offsetTop - 70, behavior:'smooth' });
-      });
-    });
+    document.querySelectorAll('nav a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').substring(1);const el=document.getElementById(id);if(el)window.scrollTo({top:el.offsetTop-70,behavior:'smooth'})})});
 
-    /* IntersectionObserver fade in */
-    const sections = document.querySelectorAll('section');
-    const obs = new IntersectionObserver((entries, ob)=>{
-      entries.forEach(ent=>{
-        if(ent.isIntersecting){ ent.target.classList.add('fade-in'); ob.unobserve(ent.target); }
-      });
-    }, {threshold:0.2, rootMargin:'0px 0px -50px 0px'});
-    sections.forEach(s => obs.observe(s));
+    const sections=document.querySelectorAll('section');
+    const obs=new IntersectionObserver((entries,ob)=>{entries.forEach(ent=>{if(ent.isIntersecting){ent.target.classList.add('fade-in');ob.unobserve(ent.target)}})},{threshold:0.2,rootMargin:'0px 0px -50px 0px'});
+    sections.forEach(s=>obs.observe(s));
 
-    /* Back to top button */
-    const btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', ()=> {
-      if(document.documentElement.scrollTop > 300) btt.style.display = 'block';
-      else btt.style.display = 'none';
-    });
-    btt.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+    const btt=document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{if(document.documentElement.scrollTop>300)btt.style.display='block';else btt.style.display='none'});
+    btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   </script>
 </body>
-        </html>
+                         </html>
